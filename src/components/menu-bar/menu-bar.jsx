@@ -33,8 +33,8 @@ const MenuBar = props => (
                 />
             </div>
             <SaveButton className={styles.menuItem} />
-            <LoadButton className={styles.menuItem} />
-            <LanguageSelector className={styles.menuItem} />
+            {/*<LoadButton  className={styles.menuItem} />
+            <LanguageSelector className={styles.menuItem} />*/}
         </div>
         <div className={styles.feedbackButtonWrapper}>
             <Button

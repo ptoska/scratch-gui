@@ -70,6 +70,7 @@
 
 .feedback-button-wrapper {
     align-self: center;
+    display: none;
     padding: 0 .5rem;
     line-height: $menu-bar-height;
 }

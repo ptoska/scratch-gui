@@ -34,9 +34,11 @@ const messages = defineMessages({
     }
 });
 
+
 // Cache this value to only retreive it once the first time.
 // Assume that it doesn't change for a session.
 let isRendererSupported = null;
+
 
 const GUIComponent = props => {
     const {
@@ -177,6 +179,7 @@ const GUIComponent = props => {
         </Box>
     );
 };
+
 GUIComponent.propTypes = {
     activeTabIndex: PropTypes.number,
     basePath: PropTypes.string,

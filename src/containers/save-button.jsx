@@ -40,18 +40,12 @@ class SaveButton extends React.Component {
             ...props
         } = this.props;
         return (
-            <ComingSoonTooltip
-                place="bottom"
-                tooltipId="save-button"
+            <ButtonComponent
+                onClick={this.handleClick}
+                {...props}
             >
-                <ButtonComponent
-                    disabled
-                    onClick={this.handleClick}
-                    {...props}
-                >
-                    Save
-                </ButtonComponent>
-            </ComingSoonTooltip>
+                Save
+            </ButtonComponent>
         );
     }
 }
@@ -61,11 +55,10 @@ SaveButton.propTypes = {
         saveProjectSb3: PropTypes.func
     })
 };
-
 const mapStateToProps = state => ({
     vm: state.vm
 });
-
+console.log(mapStateToProps);
 export default connect(
     mapStateToProps,
     () => ({}) // omit dispatch prop

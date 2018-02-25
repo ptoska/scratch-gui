@@ -45,23 +45,25 @@ const ProjectLoaderHOC = function (WrappedComponent) {
             return window.location.hash.substring(1);
         }
         updateProject () {
+            console.log("updated");
             let projectId = this.fetchProjectId();
             if (projectId !== this.state.projectId) {
                 if (projectId.length < 1) projectId = 0;
                 this.setState({projectId: projectId});
 
                 if (projectId !== 0) {
-                    analytics.event({
+                    /*analytics.event({
                         category: 'project',
                         action: 'Load Project',
                         value: projectId,
                         nonInteraction: true
-                    });
+                    });*/
                 }
             }
         }
         render () {
             if (!this.state.projectData) return null;
+            console.log(this.state.projectData);
             return (
                 <WrappedComponent
                     fetchingProject={this.state.fetchingProject}
