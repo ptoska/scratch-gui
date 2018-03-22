@@ -45,7 +45,6 @@ const ProjectLoaderHOC = function (WrappedComponent) {
             return window.location.hash.substring(1);
         }
         updateProject () {
-            console.log("updated");
             let projectId = this.fetchProjectId();
             if (projectId !== this.state.projectId) {
                 if (projectId.length < 1) projectId = 0;
@@ -63,7 +62,6 @@ const ProjectLoaderHOC = function (WrappedComponent) {
         }
         render () {
             if (!this.state.projectData) return null;
-            console.log(this.state.projectData);
             return (
                 <WrappedComponent
                     fetchingProject={this.state.fetchingProject}

@@ -23,7 +23,6 @@ const App = AppStateHOC(ProjectLoaderHOC(GUI));
 const appTarget = document.createElement('div');
 appTarget.className = styles.app;
 document.body.appendChild(appTarget);
-console.log("1");
 Modal.setAppElement(appTarget);
 
 ReactDOM.render(<App />, appTarget);

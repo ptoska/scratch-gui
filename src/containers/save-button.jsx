@@ -58,7 +58,6 @@ SaveButton.propTypes = {
 const mapStateToProps = state => ({
     vm: state.vm
 });
-console.log(mapStateToProps);
 export default connect(
     mapStateToProps,
     () => ({}) // omit dispatch prop
